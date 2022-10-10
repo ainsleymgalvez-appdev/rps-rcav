@@ -1,9 +1,15 @@
 class ApplicationController < ActionController::Base
-  layout(false)
+  layout("wrapper.html.erb")
 
   # Add your actions below this line
   # ================================
 
+  def homepage
+    
+    render ({:template => "game_templates/rules.html.erb"})
+
+  end
+  
   def play_rock
 
     index = rand(3)
